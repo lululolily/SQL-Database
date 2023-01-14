@@ -1,3 +1,5 @@
+DROP TABLE Product;
+
 CREATE TABLE Product(
 ProID number(13),
 ProName varchar(20)
@@ -64,7 +66,7 @@ INSERT INTO Product
 VALUES(1111111111130,'Sugar');
 
 
-SELECT * FROM Product
+SELECT * FROM Product;
 
-DESC Product
+DESC Product;
 
