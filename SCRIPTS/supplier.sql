@@ -9,7 +9,7 @@ DESC Supplier;
 
 INSERT INTO Supplier (SuppName, SuppContact) VALUES('Hoo Wai Lam',60127665432);
 INSERT INTO Supplier (SuppName, SuppContact) VALUES('Iskandar Ali',60137784321);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Xin Tan Fong',601179876543);
+INSERT INTO Supplier (SuppName, SuppContact) VALUES('Xin Tan Fong',60117987653);
 INSERT INTO Supplier (SuppName, SuppContact) VALUES('Surenthar',60199106795);
 INSERT INTO Supplier (SuppName, SuppContact) VALUES('Chia Wei Jie',601175753929);
 INSERT INTO Supplier (SuppName, SuppContact) VALUES('Aiman Nazmi',60129873456);

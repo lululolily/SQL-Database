@@ -1,12 +1,24 @@
 DROP TABLE Product;
+DROP TABLE Supplier;
 
 CREATE TABLE Product(
-ProID number(13),
-ProName varchar(20)
-)
+product_id NUMBER(5),
+product_name varchar(20) NOT NULL UNIQUE,
+product_price int,
+supp_id NUMBER(5),
+CONSTRAINT product_id PRIMARY KEY(product_id),
+CONSTRAINT product_supp_fk FOREIGN KEY(supp_id) REFERENCES Supplier (supp_id)
+);
+
+CREATE TABLE Supplier(
+supp_id NUMBER(5),
+supp_name varchar(20) NOT NULL UNIQUE,
+supp_contact number(11),
+CONSTRAINT supp_pk PRIMARY KEY(supp_id)
+);
 
 INSERT INTO Product
-VALUES(1111111111111,'Shampoo');
+VALUES(10001,'Shampoo');
 
 INSERT INTO Product
 VALUES(1111111111112,'Conditioner');
@@ -67,6 +79,8 @@ VALUES(1111111111130,'Sugar');
 
 
 SELECT * FROM Product;
+
+SELECT * FROM Supplier;
 
 DESC Product;
 
