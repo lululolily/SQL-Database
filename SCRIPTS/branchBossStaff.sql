@@ -46,6 +46,12 @@ select * from Branch;
 select * from Managers order by manager_id;
 select * from Staff order by staff_id;
 
+UPDATE Staff
+SET staff_name = 'Abdullah Hukum', work_hour = '2'
+WHERE staff_id = 2032;
+
+select * from Staff order by staff_id;
+
 desc Branch;
 desc Managers;
 desc Staff;

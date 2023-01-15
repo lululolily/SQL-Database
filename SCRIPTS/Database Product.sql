@@ -18,9 +18,9 @@ INSERT INTO Product VALUES(6000,'Shampoo', 11.00, 1719, 0001, 2328);
 INSERT INTO Product VALUES(6001,'Conditioner', 14.00, 1719, 0001, 2328);
 INSERT INTO Product VALUES(6002,'Moisturizer', 23.00, 1719, 0001, 2328);
 INSERT INTO Product VALUES(6003,'Lip Balm', 23.00, 1719, 0001, 2328);
-INSERT INTO Product VALUES(6004,'Sport Shoe', 104.00, 1099, 0001, 2649);
-INSERT INTO Product VALUES(6005,'Dance Shoe', 235.00, 1099, 0001, 2649);
-INSERT INTO Product VALUES(6006,'Flip Flop', 17.00, 1099, 0001, 2649);
+INSERT INTO Product VALUES(6004,'Sport Shoe', 104.00, 1576, 0001, 2649);
+INSERT INTO Product VALUES(6005,'Dance Shoe', 235.00, 1576, 0001, 2649);
+INSERT INTO Product VALUES(6006,'Flip Flop', 17.00, 1576, 0001, 2649);
 INSERT INTO Product VALUES(6007,'Maggi Goreng', 6.00, 1886, 0001, 2177);
 INSERT INTO Product VALUES(6008,'Maggi Kari', 5.50, 1886, 0001, 2177);
 INSERT INTO Product VALUES(6009,'Maggi Tomyam', 5.50, 1886, 0001, 2177);
@@ -44,6 +44,17 @@ SELECT * FROM Product;
 
 SELECT product_id, product_name, product_price, supplier_id, manager_id, staff_id FROM Product
 ORDER BY product_id;
+
+SELECT COUNT(product_id) FROM Product;
+
+SELECT AVG(product_price) FROM Product;
+
+SELECT SUM(product_price) FROM Product;
+
+SELECT Supplier.supplier_id, Supplier.supplier_name, Product.product_id, Product.product_name
+FROM Supplier
+INNER JOIN Product ON Supplier.Supplier_id = Product.Supplier_id
+FETCH FIRST 10 ROW ONLY;
 
 DESC Product;
 
