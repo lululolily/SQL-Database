@@ -56,5 +56,10 @@ FROM Supplier
 INNER JOIN Product ON Supplier.Supplier_id = Product.Supplier_id
 FETCH FIRST 10 ROW ONLY;
 
+SELECT * FROM Product
+WHERE product_price > (
+    SELECT AVG(product_price)
+    FROM Product );
+
 DESC Product;
 
