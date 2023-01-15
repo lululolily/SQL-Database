@@ -8,7 +8,7 @@ supplier_id NUMBER(4),
 manager_id NUMBER(4),
 CONSTRAINT product_id PRIMARY KEY(product_id),
 CONSTRAINT product_supp_fk FOREIGN KEY(supplier_id) REFERENCES Supplier (supplier_id),
-CONSTRAINT product_manager_fk FOREIGN KEY(manager_id) REFERENCES Boss (manager_id)
+CONSTRAINT product_manager_fk FOREIGN KEY(manager_id) REFERENCES Managers (manager_id)
 );
 
 
