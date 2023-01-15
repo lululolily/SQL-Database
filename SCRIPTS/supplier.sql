@@ -19,7 +19,7 @@ INSERT INTO Supplier VALUES(1576,'Bata','Lee Chong Wei');
 INSERT INTO Supplier VALUES(1886,'Maggi','Abdul Rahman');
 INSERT INTO Supplier VALUES(1719,'Vaseline','Zhang Yixing');
 
-SELECT * FROM Supplier
-ORDER BY SuppName DESC;
+SELECT Supplier_ID, Supplier_Name FROM Supplier
+ORDER BY Supplier_Name;
 
 DESC Supplier;
