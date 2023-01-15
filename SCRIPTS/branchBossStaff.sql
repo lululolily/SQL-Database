@@ -30,6 +30,8 @@ Insert into Staff (staff_id, staff_name, staff_role, work_hour) values (2900,'Sh
 
 Insert into Boss (manager_id, manager_name) values (0001,'Syazlin');
 Insert into Boss (manager_id, manager_name) values (0002,'Arif');
+Insert into Boss (manager_id, manager_name) values (0003,'Emilia');
+
 
 Insert into Branch (shop_location, shop_name) values ('Temerloh, Pahang','Pasar Mini Nor Syazlin Binti Mohd Sabri Cawangan Temerloh');
 Insert into Branch (shop_location, shop_name) values ('Johor Bahru, Johor','Pasar Mini Nor Syazlin Binti Mohd Sabri Cawangan Johor Bahru');
