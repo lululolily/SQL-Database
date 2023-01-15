@@ -31,6 +31,7 @@ Insert into Branch (shop_location, shop_name) values ('Teluk Ira, Pahang','Pasar
 
 Insert into Managers (manager_id, manager_name, shop_location) values (0001,'Nor Syazlin','Teluk Ira, Pahang');
 Insert into Managers (manager_id, manager_name, shop_location) values (0002,'Arif','Paya Pulai, Pahang');
+Insert into Managers (manager_id, manager_name, shop_location) values (0003,'Emilia','Paya Pulai, Pahang');
 
 Insert into Staff (staff_id, staff_name, staff_role, work_hour, shop_location) values (2328,'Nur Jannah','Cashier',8,'Paya Pulai, Pahang');
 Insert into Staff (staff_id, staff_name, staff_role, work_hour, shop_location) values (2649,'Lim Kiat Sing','Stock arranger',8,'Paya Pulai, Pahang');
@@ -48,4 +49,3 @@ select * from Staff order by staff_id;
 desc Branch;
 desc Managers;
 desc Staff;
-

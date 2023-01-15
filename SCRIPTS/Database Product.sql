@@ -1,72 +1,47 @@
 DROP TABLE Product;
 
 CREATE TABLE Product(
-ProID number(13),
-ProName varchar(20)
-)
+product_id NUMBER(4),
+product_name varchar(20) NOT NULL UNIQUE,
+product_price int,
+supplier_id NUMBER(4),
+manager_id NUMBER(4),
+CONSTRAINT product_id PRIMARY KEY(product_id),
+CONSTRAINT product_supp_fk FOREIGN KEY(supplier_id) REFERENCES Supplier (supplier_id),
+CONSTRAINT product_manager_fk FOREIGN KEY(manager_id) REFERENCES Managers (manager_id)
+);
 
-INSERT INTO Product
-VALUES(1111111111111,'Shampoo');
 
-INSERT INTO Product
-VALUES(1111111111112,'Conditioner');
-
-INSERT INTO Product
-VALUES(1111111111113,'Chips');
-
-INSERT INTO Product
-VALUES(1111111111114,'Cereal');
-
-INSERT INTO Product
-VALUES(1111111111115,'Shirt');
-
-INSERT INTO Product
-VALUES(1111111111116,'Book');
-
-INSERT INTO Product
-VALUES(1111111111117,'Bag');
-
-INSERT INTO Product
-VALUES(1111111111118,'Mug');
-
-INSERT INTO Product
-VALUES(1111111111119,'Bread');
-
-INSERT INTO Product
-VALUES(1111111111120,'Pillow');
-
-INSERT INTO Product
-VALUES(1111111111121,'French Fries');
-
-INSERT INTO Product
-VALUES(1111111111122,'Tomato');
-
-INSERT INTO Product
-VALUES(1111111111123,'Potato');
-
-INSERT INTO Product
-VALUES(1111111111124,'Onion');
-
-INSERT INTO Product
-VALUES(1111111111125,'Belt');
-
-INSERT INTO Product
-VALUES(1111111111126,'Towel');
-
-INSERT INTO Product
-VALUES(1111111111127,'Butter');
-
-INSERT INTO Product
-VALUES(1111111111128,'Cooking Oil');
-
-INSERT INTO Product
-VALUES(1111111111129,'Salt');
-
-INSERT INTO Product
-VALUES(1111111111130,'Sugar');
-
+INSERT INTO Product VALUES(6000,'Shampoo', 11.00, 1719, 0001);
+INSERT INTO Product VALUES(6001,'Conditioner', 14.00, 1719, 0001);
+INSERT INTO Product VALUES(6002,'Moisturizer', 23.00, 1719, 0001);
+INSERT INTO Product VALUES(6003,'Lip Balm', 23.00, 1719, 0001);
+INSERT INTO Product VALUES(6004,'Sport Shoe', 104.00, 1099, 0001);
+INSERT INTO Product VALUES(6005,'Dance Shoe', 235.00, 1099, 0001);
+INSERT INTO Product VALUES(6006,'Flip Flop', 17.00, 1099, 0001);
+INSERT INTO Product VALUES(6007,'Maggi Goreng', 6.00, 1886, 0001);
+INSERT INTO Product VALUES(6008,'Maggi Kari', 5.50, 1886, 0001);
+INSERT INTO Product VALUES(6009,'Maggi Tomyam', 5.50, 1886, 0001);
+INSERT INTO Product VALUES(6010,'Margerine', 8.00, 1629, 0002);
+INSERT INTO Product VALUES(6011,'Chocolate Bun', 2.00, 1047, 0002);
+INSERT INTO Product VALUES(6012,'Sardine Bun', 3.00, 1047, 0002);
+INSERT INTO Product VALUES(6013,'Wafer', 3.00, 1047, 0002);
+INSERT INTO Product VALUES(6014,'Rice', 13.00, 1033, 0002);
+INSERT INTO Product VALUES(6015,'Curry Powder', 4.30, 1248, 0002);
+INSERT INTO Product VALUES(6016,'Turmeric Powder', 4.20, 1248, 0002);
+INSERT INTO Product VALUES(6017,'Instant Fried Rice', 6.00, 1248, 0002);
+INSERT INTO Product VALUES(6018,'Sardine', 9.00, 1315, 0003);
+INSERT INTO Product VALUES(7001,'Full Cream Milk', 6.50, 1099, 0003);
+INSERT INTO Product VALUES(7002,'Low Fat Milk', 7.00, 1099, 0003);
+INSERT INTO Product VALUES(7003,'Chocolate Milk', 7.00, 1099, 0003);
+INSERT INTO Product VALUES(7004,'Oblong', 18.00, 1151, 0003);
+INSERT INTO Product VALUES(7005,'Chicken Patty', 15.00, 1151, 0003);
+INSERT INTO Product VALUES(7006,'Meat Patty', 15.00, 1151, 0003);
 
 SELECT * FROM Product;
+
+SELECT product_id, product_name, product_price, supplier_id, manager_id FROM Product
+ORDER BY supplier_id;
 
 DESC Product;
 

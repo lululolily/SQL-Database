@@ -1,12 +1,11 @@
 DROP TABLE Supplier;
 
 CREATE TABLE Supplier(
-Supplier_ID number primary key, 
-Supplier_Name varchar2(255) not null,
-Supplier_Contact varchar2(255) not null
+supplier_id number primary key, 
+supplier_name varchar2(255) not null,
+supplier_contact varchar2(255) not null
 );
 
-DESC Supplier;
 
 INSERT INTO Supplier VALUES(1047,'Gardenia','Hoo Wai Lam');
 INSERT INTO Supplier VALUES(1315,'Ayam Brand','Iskandar Ali');
