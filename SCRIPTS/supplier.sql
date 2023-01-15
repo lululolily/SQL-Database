@@ -1,21 +1,25 @@
 DROP TABLE Supplier;
 
 CREATE TABLE Supplier(
-SuppName varchar2(20) not null,
-SuppContact number(12) not null
-)
+Supplier_ID number primary key, 
+Supplier_Name varchar2(255) not null,
+Supplier_Contact varchar2(255) not null
+);
 
 DESC Supplier;
 
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Hoo Wai Lam',60127665432);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Iskandar Ali',60137784321);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Xin Tan Fong',601179876543);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Surenthar',60199106795);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Chia Wei Jie',601175753929);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Aiman Nazmi',60129873456);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Mahmud Isa',60135798642);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Lee Chong Wei',60132115047);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Abdul Rahman',60121488314);
-INSERT INTO Supplier (SuppName, SuppContact) VALUES('Zhang Yixing',601179546721);
+INSERT INTO Supplier VALUES(1047,'Gardenia','Hoo Wai Lam');
+INSERT INTO Supplier VALUES(1315,'Ayam Brand','Iskandar Ali');
+INSERT INTO Supplier VALUES(1629,'Planta','Xin Tan Fong');
+INSERT INTO Supplier VALUES(1033,'Faiza','Putra Saifuddin');
+INSERT INTO Supplier VALUES(1099,'Dutch Lady','Chia Wei Jie');
+INSERT INTO Supplier VALUES(1151,'Ramly','Aiman Nazmi');
+INSERT INTO Supplier VALUES(1248,'Adabi','Mahmud Isa');
+INSERT INTO Supplier VALUES(1576,'Bata','Lee Chong Wei');
+INSERT INTO Supplier VALUES(1886,'Maggi','Abdul Rahman');
+INSERT INTO Supplier VALUES(1719,'Vaseline','Zhang Yixing');
 
-SELECT * FROM Supplier;
+SELECT * FROM Supplier
+ORDER BY SuppName DESC;
+
+DESC Supplier;
